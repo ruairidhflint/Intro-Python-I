@@ -20,7 +20,8 @@ print(text_doc)
 # sure that it contains what you expect it to contain
 
 with open('src/bar.txt', 'w') as bar:
-    new_doc = bar.write('Hello world!\nThis is a test to see if I can open files!\nPretty cool, huh?')
+    new_doc = bar.write(
+        'Hello world!\nThis is a test to see if I can open files!\nPretty cool, huh?')
 
 with open('src/bar.txt') as new_bar:
     my_doc = new_bar.read()
