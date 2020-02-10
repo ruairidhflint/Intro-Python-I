@@ -7,11 +7,11 @@ user_input = sys.argv
 error = '\nThis calendar takes a maximum of two arguments: month and year.\nPlease enter them in numerical format eg: 01 2017\n'
 
 
-def user_calendar(year, month):
+def print_calendar(year, month):
     print(f'\n{calendar.month(year, month)}\n')
     sys.exit()
 
-
+# Function to check input can be coerced into integer
 def isValid(value):
     try:
         int(value)
@@ -19,7 +19,7 @@ def isValid(value):
     except ValueError:
         return False
 
-
+# Check user inputs exist, sanitize and proceed. If no user input, use datetime. 
 if len(user_input) == 1:
     month = dt.month
     year = dt.year
@@ -41,4 +41,4 @@ else:
     print(error)
     sys.exit()
 
-user_calendar(year, month)
+print_calendar(year, month)
