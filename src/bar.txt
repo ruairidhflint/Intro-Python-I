@@ -1,0 +1,3 @@
+Hello world!
+This is a test to see if I can open files!
+Pretty cool, huh?
